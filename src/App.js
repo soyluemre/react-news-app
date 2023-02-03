@@ -7,10 +7,13 @@ import Business from "./Pages/Business";
 import Entertainment from "./Pages/Entertainment";
 import Health from "./Pages/Health";
 import Science from "./Pages/Science";
+import { ContextProvider } from "./Context/ContextProvider";
+import { useState } from "react";
 
 function App() {
+  const [data, setData] = useState("");
   return (
-    <>
+    <ContextProvider.Provider value={{ data, setData }}>
       <Router>
         <Navbar />
         <Routes>
@@ -26,7 +29,7 @@ function App() {
           <Route path="/general" element={<Science />} cat="science" />
         </Routes>
       </Router>
-    </>
+    </ContextProvider.Provider>
   );
 }
 
