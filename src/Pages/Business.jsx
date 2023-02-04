@@ -2,9 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { ContextProvider } from "../Context/ContextProvider";
 import Pagination from "../components/Pagination";
+import { Link, useNavigate } from "react-router-dom";
 
 const Business = () => {
   const { data, setData } = useContext(ContextProvider);
+  const { category, setCategory } = useContext(ContextProvider);
   // const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const totalPages = 3;
@@ -12,6 +14,8 @@ const Business = () => {
 
   const startIndex = (page - 1) * 3;
   const selectedData = data.slice(startIndex, startIndex + 6);
+
+  const navigate = useNavigate("");
 
   const handleClick = (num) => {
     setPage(num);
@@ -24,53 +28,136 @@ const Business = () => {
       )
       .then((res) => setData(res.data.articles))
       .catch((error) => console.log(error));
+    console.log(data);
   };
   useEffect(() => {
     fetchData();
   }, []);
   return (
-    <div className="container">
+    <div className="business-page my-5">
       <div className="row">
-        {data
-          ? selectedData.map((item, index) => {
-              <div
-                key={index}
-                className="card mb-3 col-6"
-                style={{ maxWidth: "540px" }}
-              >
-                <div className="row g-0">
+        <div className="col-sm-12 col-xl-7 my-3">
+          <h5 className="text-left ms-3 display-5">Business</h5>
+          {data ? (
+            selectedData.map((items, index) => (
+              <div className="my-3 p-3 rounded business-cards" key={index}>
+                <div className="row business-card">
+                  <div className="col-sm-12 col-md-8">
+                    <a
+                      href={items?.url}
+                      style={{
+                        fontSize: "1rem",
+                        textDecoration: "none",
+                        color: "black",
+                        fontWeight: "500",
+                      }}
+                      target="_blank"
+                    >
+                      {items.title}
+                    </a>
+                    <p>{items?.description}</p>
+                  </div>
                   <div className="col-md-4">
                     <img
-                      src={item?.urlToImage}
-                      className="img-fluid rounded-start"
-                      alt="..."
+                      src={items.urlToImage}
+                      alt="newsimage"
+                      className="img-fluid business-img"
                     />
                   </div>
-                  <div className="col-md-8">
-                    <div className="card-body">
-                      <h5 className="card-title">{item?.title}</h5>
-                      <p className="card-text">{item?.description}</p>
-                      <p className="card-text">
-                        <small className="text-muted">
-                          Last updated 3 mins ago
-                        </small>
-                      </p>
-                    </div>
-                  </div>
+                  <a className="text-danger" href={items.url} target="_blank">
+                    View More
+                  </a>
                 </div>
-              </div>;
-            })
-          : "Loading.."}
-        <div className="col-6">
-          <h5>Lorem ipsum dolor sit.</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt,
-            numquam.
-          </p>
+              </div>
+            ))
+          ) : (
+            <h5 className="fw-bold text-center mt-5">Loading..</h5>
+          )}
+        </div>
+        <div className="col-sm-12 col-xl-5 mt-5">
+          <p className="popular-post-p">Popular Post</p>
+          <div className="popular-posts">
+            <div className="d-flex">
+              <span className="span-1">01</span>
+              <a href="#" className="popular-post-a">
+                EYT Teklifi Meclis Gündeminde!
+              </a>
+            </div>
+            <div className="span-div">
+              <span className="span-2">Sabah Gazetesi</span>
+              <br />
+              <span className="span-3">29 Ocak • 3 dakika ⭐</span>
+            </div>
+          </div>
+          <div className="popular-posts">
+            <div className="d-flex">
+              <span className="span-1">02</span>
+              <a href="#" className="popular-post-a">
+                Ziraat Türkiye Kupası Kura Çekimleri
+              </a>
+            </div>
+            <div className="span-div">
+              <span className="span-2">Fanatik Gazetesi</span>
+              <br />
+              <span className="span-3">30 Ocak • 2 dakika ⭐</span>
+            </div>
+          </div>
+          <div className="popular-posts">
+            <div className="d-flex">
+              <span className="span-1">03</span>
+              <a href="#" className="popular-post-a">
+                İstanbul'a Kar Geliyor!
+              </a>
+            </div>
+            <div className="span-div">
+              <span className="span-2">Hürriyet Gazetesi</span>
+              <br />
+              <span className="span-3">02 Şubat • 4 dakika ⭐</span>
+            </div>
+          </div>
+          <div className="popular-posts">
+            <div className="d-flex">
+              <span className="span-1">04</span>
+              <a href="#" className="popular-post-a">
+                TEM Otoyolunda Feci Kaza!
+              </a>
+            </div>
+            <div className="span-div">
+              <span className="span-2">Milliyet Gazetesi</span>
+              <br />
+              <span className="span-3">03 Şubat • 6 dakika ⭐</span>
+            </div>
+          </div>
+          <div className="popular-posts">
+            <div className="d-flex">
+              <span className="span-1">05</span>
+              <a href="#" className="popular-post-a">
+                Tarkan Yeni Albüm Çıkaracağını Söyledi!
+              </a>
+            </div>
+            <div className="span-div">
+              <span className="span-2">Onedio</span>
+              <br />
+              <span className="span-3">03 Şubat • 2 dakika ⭐</span>
+            </div>
+          </div>
+          <div className="popular-posts">
+            <div className="d-flex">
+              <span className="span-1">06</span>
+              <a href="#" className="popular-post-a">
+                Yeşilçam'ın Usta Oyuncusunun Son Hali Görenleri Şaşkına Çevirdi!
+              </a>
+            </div>
+            <div className="span-div">
+              <span className="span-2">Takvim Gazetesi</span>
+              <br />
+              <span className="span-3">28 Ocak • 7 dakika ⭐</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="">
+      <div>
         <Pagination
           page={page}
           setPage={setPage}

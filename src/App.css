@@ -6,11 +6,6 @@ li {
   margin-right: 1rem;
 }
 
-/* .first-nav {
-  position: sticky;
-  height: 50px;
-} */
-
 .nav-2 {
   position: sticky;
   top: 0;
@@ -76,15 +71,70 @@ li {
   padding: 2rem;
 }
 
-.activee {
-  background-color: orangered;
-  color: #fff;
-}
-
 .pagination-div {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.business-page {
+  width: 85%;
+  margin: auto;
+}
+
+.business-cards {
+  width: 800px;
+  margin-top: 2.2rem !important;
+}
+
+.business-card {
+  background-color: #aaaaaa20;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.business-img {
+  width: 100%;
+  height: 100%;
+}
+
+.span-div {
+  margin-left: 4rem;
+}
+
+.span-1 {
+  font-size: 2rem;
+  margin-right: 2rem;
+  margin-top: -0.5rem;
+  color: #aaaaaace;
+}
+
+.span-2 {
+  font-size: 0.8rem;
+}
+
+.popular-posts {
+  margin: 1rem auto;
+  background-color: #aaaaaa20;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.popular-post-p {
+  text-decoration: underline;
+  font-size: 1rem;
+  text-align: center;
+  /* margin-bottom: -4rem; */
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.popular-post-a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
 }
 
 @media (max-width: 1200px) {
@@ -122,11 +172,38 @@ li {
     height: 200px;
     object-fit: cover;
   }
+
+  .span-1 {
+    font-size: 1.6rem;
+    margin-right: 2rem;
+    margin-top: -0.5rem;
+    color: #aaaaaace;
+  }
+
+  .span-2 {
+    font-size: 0.8rem;
+  }
+
+  .popular-posts {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .business-cards {
+    width: 100%;
+    margin-top: 1rem !important;
+  }
 }
 
 @media (max-width: 992px) {
   .first-nav {
     display: none;
+  }
+
+  .popular-posts {
+    width: 100%;
+    margin: 0;
   }
 
   .navbar-nav {
@@ -176,6 +253,12 @@ li {
   .fetch-data-col {
     width: 350px;
   }
+
+  .popular-posts {
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -219,6 +302,20 @@ li {
     height: 300px;
     object-fit: cover;
   }
+
+  .business-page {
+    width: 85%;
+    margin: auto;
+  }
+
+  .business-cards {
+    width: 100%;
+    margin-top: 1rem !important;
+  }
+
+  .business-card > div > a {
+    border-bottom: 1px solid silver;
+  }
 }
 
 @media (max-width: 576px) {
@@ -254,6 +351,10 @@ li {
     width: 100%;
     height: 200px;
     object-fit: cover;
+  }
+
+  .business-card > div > p {
+    display: none;
   }
 }
 

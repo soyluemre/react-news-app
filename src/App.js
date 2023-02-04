@@ -23,11 +23,7 @@ function App() {
           <Route path="/about" element={<About />} cat="general" />
           <Route path="/general" element={<Categories />} cat="general" />
           <Route path="/business" element={<Business />} cat="business" />
-          <Route
-            path="/general"
-            element={<Entertainment />}
-            cat="entertainment"
-          />
+          <Route path="/entertainment" element={<Entertainment />} />
           <Route path="/general" element={<Health />} cat="health" />
           <Route path="/general" element={<Science />} cat="science" />
         </Routes>
