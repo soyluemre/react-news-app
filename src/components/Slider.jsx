@@ -2,9 +2,7 @@ import React, { useContext } from "react";
 import { ContextProvider } from "../Context/ContextProvider";
 import newsImage from "../img/news.jpg";
 
-const Slider = () => {
-  const { data } = useContext(ContextProvider);
-
+const Slider = ({ data }) => {
   return (
     <div
       id="carouselBasicExample"
