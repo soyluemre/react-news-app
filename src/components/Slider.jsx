@@ -6,7 +6,7 @@ const Slider = ({ data }) => {
   return (
     <div
       id="carouselBasicExample"
-      className="carousel slide carousel-fade slider-content"
+      className="carousel slide  slider-content"
       data-bs-ride="carousel"
     >
       <div className="carousel-indicators d-none">
@@ -36,30 +36,45 @@ const Slider = ({ data }) => {
         {/* Single item */}
         <a href={data[0]?.url} target="_blank">
           <div className="carousel-item active">
-            <img src={data[0] ? data[0].urlToImage : newsImage} alt="img" />
-            <div className="carousel-caption">
-              <h5 className="slider-header">{data[0]?.title}</h5>
+            <div className="row">
+              <div className="col-6">
+                <img src={data[0] ? data[0].urlToImage : newsImage} alt="img" />
+              </div>
+              <div className="col-6 slider-right">
+                <div className="container text-center">
+                  <h5>{data[0].title}</h5>
+                </div>
+              </div>
             </div>
           </div>
         </a>
 
-        {/* Single item */}
         <a href={data[1]?.url} target="_blank">
-          <div className="carousel-item">
-            <img src={data[1] ? data[1].urlToImage : newsImage} alt="img" />
-            <div className="carousel-caption">
-              <h5 className="slider-header">{data[1]?.title}</h5>
+          <div className="carousel-item active">
+            <div className="row">
+              <div className="col-6">
+                <img src={data[1] ? data[1].urlToImage : newsImage} alt="img" />
+              </div>
+              <div className="col-6 slider-right">
+                <div className="container text-center">
+                  <h5>{data[1].title}</h5>
+                </div>
+              </div>
             </div>
           </div>
         </a>
-
-        {/* Single item */}
 
         <a href={data[2]?.url} target="_blank">
-          <div className="carousel-item">
-            <img src={data[2] ? data[2].urlToImage : newsImage} alt="img" />
-            <div className="carousel-caption">
-              <h5 className="slider-header">{data[2]?.title}</h5>
+          <div className="carousel-item active">
+            <div className="row">
+              <div className="col-6">
+                <img src={data[2] ? data[2].urlToImage : newsImage} alt="img" />
+              </div>
+              <div className="col-6 slider-right">
+                <div className="container text-center">
+                  <h5>{data[2].title}</h5>
+                </div>
+              </div>
             </div>
           </div>
         </a>

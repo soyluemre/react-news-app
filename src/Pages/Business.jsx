@@ -2,20 +2,15 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { ContextProvider } from "../Context/ContextProvider";
 import Pagination from "../components/Pagination";
-import { Link, useNavigate } from "react-router-dom";
 
 const Business = () => {
   const { data, setData } = useContext(ContextProvider);
-  const { category, setCategory } = useContext(ContextProvider);
-  // const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
   const totalPages = 3;
   const apiKey = "02a1e0e608cb49b1936a76ccb837bec9";
 
   const startIndex = (page - 1) * 3;
   const selectedData = data.slice(startIndex, startIndex + 6);
-
-  const navigate = useNavigate("");
 
   const handleClick = (num) => {
     setPage(num);
@@ -36,8 +31,8 @@ const Business = () => {
   return (
     <div className="business-page my-5">
       <div className="row">
-        <div className="col-sm-12 col-xl-7 my-3">
-          <h5 className="text-left ms-3 display-5">Business</h5>
+        <div className="col-sm-12 col-xl-8 my-3">
+          <h5 className="ms-3">Business</h5>
           {data ? (
             selectedData.map((items, index) => (
               <div className="my-3 p-3 rounded business-cards" key={index}>
@@ -52,6 +47,7 @@ const Business = () => {
                         fontWeight: "500",
                       }}
                       target="_blank"
+                      className="aaa"
                     >
                       {items.title}
                     </a>
@@ -74,7 +70,7 @@ const Business = () => {
             <h5 className="fw-bold text-center mt-5">Loading..</h5>
           )}
         </div>
-        <div className="col-sm-12 col-xl-5 mt-5">
+        <div className="col-sm-12 col-xl-4 mt-5">
           <p className="popular-post-p">Popular Post</p>
           <div className="popular-posts">
             <div className="d-flex">

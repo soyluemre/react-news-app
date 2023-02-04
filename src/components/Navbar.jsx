@@ -74,15 +74,6 @@ const Navbar = () => {
                     About
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link
-                    className="nav-link active"
-                    aria-current="page"
-                    to="/general"
-                  >
-                    General
-                  </Link>
-                </li>
 
                 <li className="nav-item">
                   <Link
@@ -112,7 +103,11 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/">
+                  <Link
+                    className="nav-link active"
+                    aria-current="page"
+                    to="/science"
+                  >
                     Science
                   </Link>
                 </li>

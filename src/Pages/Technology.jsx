@@ -3,7 +3,7 @@ import axios from "axios";
 import { ContextProvider } from "../Context/ContextProvider";
 import Pagination from "../components/Pagination";
 
-const Entertainment = () => {
+const Technology = () => {
   const { data, setData } = useContext(ContextProvider);
   const [page, setPage] = useState(1);
   const totalPages = 3;
@@ -19,7 +19,7 @@ const Entertainment = () => {
   const fetchData = async () => {
     await axios
       .get(
-        `https://newsapi.org/v2/top-headlines?country=tr&category=entertainment&apiKey=${apiKey}`
+        `https://newsapi.org/v2/top-headlines?country=tr&category=technology&apiKey=${apiKey}`
       )
       .then((res) => setData(res.data.articles))
       .catch((error) => console.log(error));
@@ -32,7 +32,7 @@ const Entertainment = () => {
     <div className="business-page my-5">
       <div className="row">
         <div className="col-sm-12 col-xl-8 my-3">
-          <h5 className="ms-3">Entertainment</h5>
+          <h5 className="ms-3">Technology</h5>
           {data ? (
             selectedData.map((items, index) => (
               <div className="my-3 p-3 rounded business-cards" key={index}>
@@ -139,4 +139,4 @@ const Entertainment = () => {
   );
 };
 
-export default Entertainment;
+export default Technology;
