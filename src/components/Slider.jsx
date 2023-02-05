@@ -1,5 +1,5 @@
 import React from "react";
-import newsImage from "../img/news.jpg";
+import newsImage from "../assets/img/news.jpg";
 
 const Slider = ({ data }) => {
   return (

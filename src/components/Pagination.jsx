@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Pagination = ({ totalPages, page, setPage, handleClick }) => {
   const pages = [...Array(totalPages).keys()].map((num) => num + 1);

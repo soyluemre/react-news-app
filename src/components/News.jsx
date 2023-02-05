@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Pagination from "./Pagination";
-import newsImage from "../img/news.jpg";
+import newsImage from "../assets/img/news.jpg";
 
 const News = ({ data, totalPages }) => {
   const [page, setPage] = useState(1);
