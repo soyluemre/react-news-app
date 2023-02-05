@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { ContextProvider } from "../Context/ContextProvider";
 import Pagination from "../components/Pagination";
-import newsImage from "../img/news.jpg";
+import newsImage from "../assets/img/news.jpg";
 
 const Science = () => {
   const { data, setData } = useContext(ContextProvider);
