@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
-import { ContextProvider } from "../Context/ContextProvider";
+import React from "react";
 import newsImage from "../img/news.jpg";
 
 const Slider = ({ data }) => {
+  console.log(data[0]);
   return (
     <div
       id="carouselBasicExample"
-      className="carousel slide  slider-content"
+      className="carousel slide slider-content container"
       data-bs-ride="carousel"
     >
       <div className="carousel-indicators d-none">
@@ -34,50 +34,57 @@ const Slider = ({ data }) => {
       {/* Inner */}
       <div className="carousel-inner">
         {/* Single item */}
-        <a href={data[0]?.url} target="_blank">
-          <div className="carousel-item active">
-            <div className="row">
-              <div className="col-6">
-                <img src={data[0] ? data[0].urlToImage : newsImage} alt="img" />
-              </div>
-              <div className="col-6 slider-right">
-                <div className="container text-center">
-                  <h5>{data[0].title}</h5>
-                </div>
+        <div className="carousel-item active">
+          <div className="row">
+            <div className="col-sm-12 col-lg-6">
+              <img src={data[0] ? data[0].urlToImage : newsImage} alt="img" />
+            </div>
+            <div className="col-sm-12 col-lg-6 slider-right">
+              <div className="container text-center">
+                <span>EDITOR'S PICK</span>
+                <h5>{data[0]?.title.slice(0, 50).concat("...")}</h5>
+                <p> {data[0]?.description.slice(0, 100).concat("...")}</p>
+                <a href={data[0]?.url} target="_blank" title="Habere Git">
+                  {data[0] ? data[0].author : "Haberin Devamı.."}
+                </a>
               </div>
             </div>
           </div>
-        </a>
-
-        <a href={data[1]?.url} target="_blank">
-          <div className="carousel-item active">
-            <div className="row">
-              <div className="col-6">
-                <img src={data[1] ? data[1].urlToImage : newsImage} alt="img" />
-              </div>
-              <div className="col-6 slider-right">
-                <div className="container text-center">
-                  <h5>{data[1].title}</h5>
-                </div>
+        </div>
+        <div className="carousel-item">
+          <div className="row">
+            <div className="col-sm-12 col-lg-6">
+              <img src={data[1] ? data[1].urlToImage : newsImage} alt="img" />
+            </div>
+            <div className="col-sm-12 col-lg-6 slider-right">
+              <div className="container text-center">
+                <span>EDITOR'S PICK</span>
+                <h5>{data[1]?.title.slice(0, 50).concat("...")}</h5>
+                <p> {data[1]?.description.slice(0, 100).concat("...")}</p>
+                <a href={data[1]?.url} target="_blank" title="Habere Git">
+                  {data[1] ? data[1].author : "Haberin Devamı.."}
+                </a>
               </div>
             </div>
           </div>
-        </a>
-
-        <a href={data[2]?.url} target="_blank">
-          <div className="carousel-item active">
-            <div className="row">
-              <div className="col-6">
-                <img src={data[2] ? data[2].urlToImage : newsImage} alt="img" />
-              </div>
-              <div className="col-6 slider-right">
-                <div className="container text-center">
-                  <h5>{data[2].title}</h5>
-                </div>
+        </div>
+        <div className="carousel-item">
+          <div className="row">
+            <div className="col-sm-12 col-lg-6">
+              <img src={data[2] ? data[2].urlToImage : newsImage} alt="img" />
+            </div>
+            <div className="col-sm-12 col-lg-6 slider-right">
+              <div className="container text-center">
+                <span>EDITOR'S PICK</span>
+                <h5>{data[2]?.title.slice(0, 50).concat("...")}</h5>
+                <p> {data[2]?.description.slice(0, 100).concat("...")}</p>
+                <a href={data[2]?.url} target="_blank" title="Habere Git">
+                  {data[2] ? data[2].author : "Haberin Devamı.."}
+                </a>
               </div>
             </div>
           </div>
-        </a>
+        </div>
       </div>
 
       {/* Controls */}
@@ -87,7 +94,10 @@ const Slider = ({ data }) => {
         data-bs-target="#carouselBasicExample"
         data-bs-slide="prev"
       >
-        <span className="carousel-control-prev-icon" aria-hidden="true" />
+        <span
+          className="carousel-control-prev-icon slider-span"
+          aria-hidden="true"
+        />
         <span className="visually-hidden">Previous</span>
       </button>
       <button
@@ -96,7 +106,10 @@ const Slider = ({ data }) => {
         data-bs-target="#carouselBasicExample"
         data-bs-slide="next"
       >
-        <span className="carousel-control-next-icon" aria-hidden="true" />
+        <span
+          className="carousel-control-next-icon slider-span"
+          aria-hidden="true"
+        />
         <span className="visually-hidden">Next</span>
       </button>
     </div>

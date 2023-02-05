@@ -17,7 +17,7 @@ const News = ({ data, totalPages }) => {
         {data ? (
           selectedData.slice(3, 20).map((items, index) => (
             <div
-              className="container my-3 p-3 rounded col-sm-12 col-lg-4 fetch-data-col"
+              className="container my-3 p-3 rounded col-lg-4 fetch-data-col"
               key={index}
             >
               <div className="d-flex justify-content-center align-items-center">
@@ -27,13 +27,11 @@ const News = ({ data, totalPages }) => {
                   className="img-fluid col-img"
                 />
               </div>
-              <h5 style={{ fontSize: "1rem" }} className="my-2">
-                {items.title}
-              </h5>
-
-              <a className="text-danger" href={items.url} target="_blank">
-                View More
-              </a>
+              <div className="data-title">
+                <a title="Habere Git" href={items?.url} target="_blank">
+                  {items.title}
+                </a>
+              </div>
             </div>
           ))
         ) : (

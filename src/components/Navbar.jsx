@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div>
-      <nav className="bg-light fs-4 mx-auto py-3 container first-nav">
-        <div className="d-flex container justify-content-center align-items-center ">
+    <div className="container">
+      <nav className="fs-4 mx-auto py-3 first-nav container">
+        <div className="d-flex container justify-content-center align-items-center p-2">
           <div className="me-auto">
-            <h5 style={{ color: "orangered" }}> Emre Soylu</h5>
+            <a href="#!" className="nav-title">
+              Emre Soylu
+            </a>
           </div>
           <div className="d-flex">
             <div>
@@ -39,8 +41,8 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <nav id="navbar" className="navbar navbar-expand-lg bg-light nav-2">
-        <div className="container">
+      <nav id="navbar" className="navbar navbar-expand-lg nav-2 container">
+        <div>
           <button
             className="navbar-toggler"
             type="button"
@@ -59,7 +61,7 @@ const Navbar = () => {
             tabIndex={-1}
           >
             <div className="offcanvas-body">
-              <ul className="navbar-nav mx-auto mb-2 mb-lg-0 fs-5">
+              <ul className="navbar-nav  mb-2 mb-lg-0 fs-5">
                 <li className="nav-item">
                   <Link className="nav-link active" aria-current="page" to="/">
                     Home
