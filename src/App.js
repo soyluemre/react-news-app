@@ -12,6 +12,7 @@ import About from "./Pages/About";
 import Sports from "./Pages/Sports";
 import Technology from "./Pages/Technology";
 import Footer from "./components/Footer";
+import NotFound from "./Pages/NotFound";
 
 function App() {
   const [data, setData] = useState("");
@@ -29,6 +30,7 @@ function App() {
           <Route path="/health" element={<Health />} />
           <Route path="/science" element={<Science />} />
           <Route path="/technology" element={<Technology />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Router>

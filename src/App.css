@@ -325,6 +325,16 @@ li {
   margin-left: 0.5rem;
 }
 
+.notfound-btn {
+  background-color: #7bae40;
+  color: #fff;
+}
+
+.notfound-btn:hover {
+  background-color: #7bae40db;
+  color: #fff;
+}
+
 @media (max-width: 1200px) {
   .slider-content {
     width: 100%;
