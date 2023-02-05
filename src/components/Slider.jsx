@@ -32,7 +32,7 @@ const Slider = ({ data }) => {
         />
       </div>
       {/* Inner */}
-      <div className="carousel-inner">
+      <div className="carousel-inner container">
         {/* Single item */}
         <div className="carousel-item active">
           <div className="row">
@@ -40,10 +40,10 @@ const Slider = ({ data }) => {
               <img src={data[0] ? data[0].urlToImage : newsImage} alt="img" />
             </div>
             <div className="col-sm-12 col-lg-6 slider-right">
-              <div className="container text-center">
+              <div className="container">
                 <span>EDITOR'S PICK</span>
                 <h5>{data[0]?.title.slice(0, 50).concat("...")}</h5>
-                <p> {data[0]?.description.slice(0, 100).concat("...")}</p>
+                <p> {data[0]?.description.slice(0, 200).concat("...")}</p>
                 <a href={data[0]?.url} target="_blank" title="Habere Git">
                   {data[0] ? data[0].author : "Haberin Devamı.."}
                 </a>
@@ -57,10 +57,10 @@ const Slider = ({ data }) => {
               <img src={data[1] ? data[1].urlToImage : newsImage} alt="img" />
             </div>
             <div className="col-sm-12 col-lg-6 slider-right">
-              <div className="container text-center">
+              <div className="container">
                 <span>EDITOR'S PICK</span>
                 <h5>{data[1]?.title.slice(0, 50).concat("...")}</h5>
-                <p> {data[1]?.description.slice(0, 100).concat("...")}</p>
+                <p> {data[1]?.description.slice(0, 200).concat("...")}</p>
                 <a href={data[1]?.url} target="_blank" title="Habere Git">
                   {data[1] ? data[1].author : "Haberin Devamı.."}
                 </a>
@@ -74,10 +74,10 @@ const Slider = ({ data }) => {
               <img src={data[2] ? data[2].urlToImage : newsImage} alt="img" />
             </div>
             <div className="col-sm-12 col-lg-6 slider-right">
-              <div className="container text-center">
+              <div className="container">
                 <span>EDITOR'S PICK</span>
                 <h5>{data[2]?.title.slice(0, 50).concat("...")}</h5>
-                <p> {data[2]?.description.slice(0, 100).concat("...")}</p>
+                <p> {data[2]?.description.slice(0, 200).concat("...")}</p>
                 <a href={data[2]?.url} target="_blank" title="Habere Git">
                   {data[2] ? data[2].author : "Haberin Devamı.."}
                 </a>

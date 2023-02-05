@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Pagination from "./Pagination";
+import newsImage from "../img/news.jpg";
 
 const News = ({ data, totalPages }) => {
   const [page, setPage] = useState(1);
@@ -13,24 +14,25 @@ const News = ({ data, totalPages }) => {
 
   return (
     <div className="container my-5 fetch-data-row">
-      <div className="row my-3">
+      <div className="row my-3 mx-auto">
         {data ? (
           selectedData.slice(3, 20).map((items, index) => (
             <div
-              className="container my-3 p-3 rounded col-lg-4 fetch-data-col"
+              className="container my-3 p-3 rounded col-sm-12 col-md-6 col-lg-4  fetch-data-col"
               key={index}
             >
               <div className="d-flex justify-content-center align-items-center">
                 <img
-                  src={items.urlToImage}
+                  src={items ? items?.urlToImage : newsImage}
                   alt="newsimage"
                   className="img-fluid col-img"
                 />
               </div>
               <div className="data-title">
                 <a title="Habere Git" href={items?.url} target="_blank">
-                  {items.title}
+                  {items?.title.slice(0, 90).concat("....")}
                 </a>
+                <p>{items?.description.slice(0, 60).concat("...")}</p>
               </div>
             </div>
           ))
