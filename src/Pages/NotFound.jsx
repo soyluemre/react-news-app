@@ -7,11 +7,11 @@ const NotFound = () => {
     <div className="container text-center mb-5 p-5">
       <div>
         <h6 className="mb-5">Oopss..! Page Not Found..</h6>
-        <img width="40%" src={notfound} />
+        <img width="40%" src={notfound} alt="notfound" />
         <br />
         <br />
         <Link to="/react-news-app">
-          <button className="btn notfound-btn w-50">Go Home</button>
+          <button className="notfound-btn w-50">Go Home</button>
         </Link>
       </div>
     </div>

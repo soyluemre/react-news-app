@@ -347,6 +347,9 @@ li {
 /* Notfound Page */
 
 .notfound-btn {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
   background-color: #7bae40;
   color: #fff;
 }

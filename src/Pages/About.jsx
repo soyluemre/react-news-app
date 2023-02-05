@@ -148,12 +148,7 @@ const About = () => {
           <h2 className="heading">Contact</h2>
         </div>
         {/* Contact Form */}
-        <form
-          action="https://formspree.io/f/xvongnod"
-          method="POST"
-          className="contact-form"
-          id="contact-form"
-        >
+        <form method="POST" className="contact-form" id="contact-form">
           <input
             name="fullname"
             type="text"
@@ -175,7 +170,6 @@ const About = () => {
             placeholder="Write message Here.."
             className="message"
             required
-            defaultValue={""}
           />
           <button disabled type="submit" className="send-btn w-100">
             SEND
