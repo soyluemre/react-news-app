@@ -120,10 +120,6 @@ li {
   color: #7bae40 !important;
 }
 
-.nav-link:hover {
-  color: #7bae40 !important;
-}
-
 .slider-content {
   width: 1200px;
   margin: 4rem auto 7rem auto;
@@ -220,6 +216,21 @@ li {
   color: #7bae40;
 }
 
+.page-link {
+  color: #000;
+}
+
+.page-link:hover,
+.page-link:focus {
+  background-color: #7bae40;
+  color: #fff;
+}
+
+.pagination-active {
+  background-color: #7bae40;
+  color: #fff;
+}
+
 .pagination-div {
   display: flex;
   justify-content: center;
@@ -288,6 +299,30 @@ li {
 
 .navbar-toggler {
   border: none !important;
+}
+
+.footer-top {
+  margin-bottom: 3rem;
+  margin: auto;
+}
+
+.footer-top-content {
+  margin-top: 3rem;
+  width: 50%;
+}
+
+.footer-top-form {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.footer-bottom a {
+  color: #7bae40;
+  text-decoration: none;
+  margin-left: 0.5rem;
 }
 
 @media (max-width: 1200px) {
@@ -372,6 +407,10 @@ li {
     text-transform: capitalize !important;
   }
 
+  .nav-link:hover {
+    color: #7bae40 !important;
+  }
+
   .navbar-input {
     height: 2.5rem;
     font-size: 0.9rem;
@@ -383,6 +422,12 @@ li {
     padding: 0.5rem;
     width: 3rem;
     background-color: #000;
+  }
+
+  .activee {
+    color: black !important;
+    background-color: #fff;
+    border-radius: 10px;
   }
 
   .slider-content {
@@ -476,6 +521,19 @@ li {
   .business-card > div > a {
     border-bottom: 1px solid silver;
   }
+
+  .footer-top-content {
+    margin-top: 3rem;
+    width: 100%;
+  }
+
+  .footer-top-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -549,5 +607,34 @@ li {
 
   .offcanvas {
     width: 240px !important;
+  }
+
+  .footer-top-content {
+    margin-top: 2rem;
+  }
+
+  .footer-top-content h5 {
+    font-size: 1rem;
+  }
+
+  .footer-top-content p {
+    font-size: 0.8rem;
+  }
+
+  .footer-top-form {
+    min-height: 100px;
+  }
+
+  .footer-top-form input {
+    height: 2.2rem;
+  }
+
+  .footer-top-form button {
+    padding: 0.4rem;
+    width: 2.2rem;
+  }
+
+  .footer-bottom span {
+    font-size: 0.8rem;
   }
 }

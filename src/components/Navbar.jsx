@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -73,74 +73,94 @@ const Navbar = () => {
             </div>
             <div className="offcanvas-body">
               <ul className="navbar-nav mb-2 mb-lg-0 fs-5">
-                <li className="nav-item activee">
-                  <Link className="nav-link active" aria-current="page" to="/">
+                <li className="nav-item">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "nav-link activee" : "nav-link"
+                    }
+                    aria-current="page"
+                    to="/"
+                  >
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link active"
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "nav-link activee" : "nav-link"
+                    }
                     aria-current="page"
                     to="/about"
                   >
                     About
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li className="nav-item">
-                  <Link
-                    className="nav-link active"
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "nav-link activee" : "nav-link"
+                    }
                     aria-current="page"
                     to="/business"
                   >
                     Business
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link active"
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "nav-link activee" : "nav-link"
+                    }
                     aria-current="page"
                     to="/entertainment"
                   >
                     Entertainment
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link active"
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "nav-link activee" : "nav-link"
+                    }
                     aria-current="page"
                     to="/health"
                   >
                     Health
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link active"
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "nav-link activee" : "nav-link"
+                    }
                     aria-current="page"
                     to="/science"
                   >
                     Science
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link active"
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "nav-link activee" : "nav-link"
+                    }
                     aria-current="page"
                     to="/sports"
                   >
                     Sports
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link
-                    className="nav-link active"
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "nav-link activee" : "nav-link"
+                    }
                     aria-current="page"
                     to="/technology"
                   >
                     Technology
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </div>

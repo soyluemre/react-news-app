@@ -18,13 +18,11 @@ const Pagination = ({ totalPages, page, setPage, handleClick }) => {
 
         {pages.map((num, index) => {
           return (
-            <li
-              onClick={() => handleClick(num)}
-              key={index}
-              className={page === num ? `page-item active` : `page-item`}
-            >
+            <li onClick={() => handleClick(num)} key={index}>
               <a
-                className={page === num ? `page-link activee` : `page-link`}
+                className={
+                  page === num ? `page-link pagination-active` : `page-link`
+                }
                 href="#!"
               >
                 {num}
