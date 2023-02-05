@@ -22,12 +22,7 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route
-            exact
-            path="/react-news-app
-"
-            element={<Home />}
-          />
+          <Route exact path="/react-news-app" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/sports" element={<Sports />} />
           <Route path="/business" element={<Business />} />

@@ -7,7 +7,7 @@ const Navbar = () => {
       <nav className="fs-4 mx-auto py-3 first-nav container">
         <div className="d-flex container justify-content-center align-items-center p-2">
           <div className="me-auto ms-2">
-            <Link to="/" className="nav-title">
+            <Link to="/react-news-app" className="nav-title">
               Emre Soylu
             </Link>
           </div>
@@ -83,7 +83,7 @@ const Navbar = () => {
                       isActive ? "nav-link activee" : "nav-link"
                     }
                     aria-current="page"
-                    to="/"
+                    to="/react-news-app"
                   >
                     Home
                   </NavLink>
