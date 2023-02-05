@@ -1,18 +1,18 @@
 import React from "react";
 import "../css/about.css";
-import emreSoyluPhoto from "../img/emresoylu2.png";
-import productCards from "../img/product-cards.png";
-import restoranWebSitePhoto from "../img/Qrispy.png";
-import scssWebSitePhoto from "../img/Scss-Example.png";
-import movieAppPhoto from "../img/MovieApp.png";
-import englishResume from "../Download File/Emre_Soylu_Resume.pdf";
-import turkishResume from "../Download File/Emre_Soylu_Ozgecmis.pdf";
+import emreSoyluPhoto from "../assets/img/emresoylu2.png";
+import productCards from "../assets/img/product-cards.png";
+import restoranWebSitePhoto from "../assets//img/Qrispy.png";
+import scssWebSitePhoto from "../assets//img/Scss-Example.png";
+import movieAppPhoto from "../assets//img/MovieApp.png";
+import englishResume from "../assets//Download File/Emre_Soylu_Resume.pdf";
+import turkishResume from "../assets//Download File/Emre_Soylu_Ozgecmis.pdf";
 
 const About = () => {
   return (
     <>
       {/* Home */}
-      <section className="home container" id="home">
+      <section className="home about-container" id="home">
         <div className="home-content">
           <div className="home-img">
             <img src={emreSoyluPhoto} alt="Emre-Soylu-Image" title="Hey! 🙋🏽‍♂️" />
@@ -42,10 +42,10 @@ const About = () => {
         </div>
       </section>
       {/* About */}
-      <section className="about container" id="about">
+      <section className="aboutPage about-container" id="about">
         <h2 className="heading">About</h2>
-        <div className="about-content">
-          <div className="about-data text-center">
+        <div className="aboutPage-content">
+          <div className="aboutPage-data text-center">
             <h2>Web Developer</h2>
             <span>Download Resume</span>
             <div className="cv text-center">
@@ -69,7 +69,7 @@ const About = () => {
               </a>
             </div>
           </div>
-          <div className="about-text">
+          <div className="aboutPage-text">
             <p>
               I'm from Istanbul, Turkey. I make Web Sites with original designs.
             </p>
@@ -80,8 +80,8 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/* Porjects */}
-      <section className="portfolio container" id="portfolio">
+      {/* Projects */}
+      <section className="portfolio about-container" id="portfolio">
         {/*Heading */}
         <h2 className="heading">Projects</h2>
         {/* Porjects Content*/}
@@ -142,7 +142,7 @@ const About = () => {
         </div>
       </section>
       {/* Contact Form */}
-      <section className="contact container" id="contact">
+      <section className="contact about-container" id="contact">
         {/* Heading */}
         <div className="text-center">
           <h2 className="heading">Contact</h2>
@@ -183,7 +183,7 @@ const About = () => {
         </form>
       </section>
       {/* Footer */}
-      <section className="footer container" id="footer">
+      <section className="footer about-container" id="footer">
         <div className="social social-footer">
           <a href="https://linkedin.com/in/emre-soylu/" target="_blank">
             <i className="fa-brands fa-linkedin-in fa-2x" />

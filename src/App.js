@@ -1,4 +1,4 @@
-import "./App.css";
+import "./css/App.css";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
@@ -22,7 +22,12 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route
+            exact
+            path="/react-news-app
+"
+            element={<Home />}
+          />
           <Route path="/about" element={<About />} />
           <Route path="/sports" element={<Sports />} />
           <Route path="/business" element={<Business />} />

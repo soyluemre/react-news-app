@@ -32,7 +32,7 @@ const News = ({ data, totalPages }) => {
                 <a title="Habere Git" href={items?.url} target="_blank">
                   {items?.title.slice(0, 90).concat("....")}
                 </a>
-                <p>{items?.description.slice(0, 60).concat("...")}</p>
+                <p>{items?.description?.slice(0, 60).concat("...")}</p>
               </div>
             </div>
           ))
@@ -40,7 +40,7 @@ const News = ({ data, totalPages }) => {
           <h5 className="fw-bold text-center">Loading..</h5>
         )}
       </div>
-      <div className="">
+      <div>
         <Pagination
           page={page}
           setPage={setPage}

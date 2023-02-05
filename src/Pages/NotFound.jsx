@@ -10,7 +10,7 @@ const NotFound = () => {
         <img width="40%" src={notfound} />
         <br />
         <br />
-        <Link to="/">
+        <Link to="/react-news-app">
           <button className="btn notfound-btn w-50">Go Home</button>
         </Link>
       </div>

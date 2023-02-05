@@ -6,10 +6,8 @@ import { ContextProvider } from "../Context/ContextProvider";
 
 const FetchData = () => {
   const { data, setData } = useContext(ContextProvider);
-  // const [totalPages, setTotalPages] = useState(3);
   const totalPages = 3;
-  // const apiKey = "02a1e0e608cb49b1936a76ccb837bec9";
-  const apiKey = "676f017549224f488970f1835f9db971";
+  const apiKey = "02a1e0e608cb49b1936a76ccb837bec9";
 
   const fetchData = async () => {
     await axios

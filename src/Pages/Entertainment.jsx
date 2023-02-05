@@ -8,8 +8,7 @@ const Entertainment = () => {
   const { data, setData } = useContext(ContextProvider);
   const [page, setPage] = useState(1);
   const totalPages = 3;
-  // const apiKey = "02a1e0e608cb49b1936a76ccb837bec9";
-  const apiKey = "676f017549224f488970f1835f9db971";
+  const apiKey = "02a1e0e608cb49b1936a76ccb837bec9";
 
   const startIndex = (page - 1) * 3;
   const selectedData = data.slice(startIndex, startIndex + 6);
@@ -25,7 +24,6 @@ const Entertainment = () => {
       )
       .then((res) => setData(res.data.articles))
       .catch((error) => console.log(error));
-    console.log(data);
   };
   useEffect(() => {
     fetchData();

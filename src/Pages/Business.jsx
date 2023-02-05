@@ -7,10 +7,8 @@ import newsImage from "../img/news.jpg";
 const Business = () => {
   const { data, setData } = useContext(ContextProvider);
   const [page, setPage] = useState(1);
-  // const [totalPages, setTotalPages] = useState(3);
   const totalPages = 3;
-  // const apiKey = "02a1e0e608cb49b1936a76ccb837bec9";
-  const apiKey = "676f017549224f488970f1835f9db971";
+  const apiKey = "02a1e0e608cb49b1936a76ccb837bec9";
 
   const startIndex = (page - 1) * 3;
   const selectedData = data.slice(startIndex, startIndex + 6);
@@ -26,7 +24,6 @@ const Business = () => {
       )
       .then((res) => setData(res.data.articles))
       .catch((error) => console.log(error));
-    console.log(data);
   };
   useEffect(() => {
     fetchData();
@@ -41,17 +38,7 @@ const Business = () => {
               <div className="my-3 p-3 rounded business-cards" key={index}>
                 <div className="row business-card">
                   <div className="col-sm-12 col-md-8">
-                    <a
-                      href={items?.url}
-                      style={{
-                        fontSize: "1rem",
-                        textDecoration: "none",
-                        color: "black",
-                        fontWeight: "500",
-                      }}
-                      target="_blank"
-                      className="aaa"
-                    >
+                    <a href={items?.url} target="_blank" className="aaa">
                       {items?.title?.slice(0, 65).concat(".....")}
                     </a>
                     <p>{items?.description?.slice(0, 65).concat(".....")}</p>

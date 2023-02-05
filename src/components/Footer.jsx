@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
           <div>
             <button className="navbar-button">
-              <i className="fas fa-thin fa-magnifying-glass"></i>
+              <i className="fa-solid fa-paper-plane"></i>
             </button>
           </div>
         </div>

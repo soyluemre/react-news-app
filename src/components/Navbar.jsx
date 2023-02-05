@@ -14,13 +14,13 @@ const Navbar = () => {
           <div className="d-flex align-items-center">
             <div className="icons">
               <a href="#!">
-                <i class="fa-brands fa-facebook-f"></i>
+                <i className="fa-brands fa-facebook-f"></i>
               </a>
               <a href="#!">
-                <i class="fa-brands fa-twitter"></i>
+                <i className="fa-brands fa-twitter"></i>
               </a>
               <a href="#!">
-                <i class="fa-brands fa-instagram"></i>
+                <i className="fa-brands fa-instagram"></i>
               </a>
             </div>
             <div className="d-flex">
@@ -42,7 +42,11 @@ const Navbar = () => {
       </nav>
       <nav id="navbar" className="navbar navbar-expand-lg nav-2">
         <div className="container nav2-div">
-          <Link to="/" className="nav-title-2">
+          <Link
+            to="/react-news-app
+"
+            className="nav-title-2"
+          >
             Emre Soylu
           </Link>
           <button
@@ -52,7 +56,7 @@ const Navbar = () => {
             data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar"
           >
-            <i class="fas fa-light fa-bars"></i>
+            <i className="fas fa-light fa-bars"></i>
           </button>
           <div
             className="offcanvas offcanvas-end"
@@ -68,7 +72,7 @@ const Navbar = () => {
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               >
-                <i class="fas fa-light fa-xmark"></i>
+                <i className="fas fa-light fa-xmark"></i>
               </button>
             </div>
             <div className="offcanvas-body">

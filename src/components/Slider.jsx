@@ -2,7 +2,6 @@ import React from "react";
 import newsImage from "../img/news.jpg";
 
 const Slider = ({ data }) => {
-  console.log(data[0]);
   return (
     <div
       id="carouselBasicExample"
