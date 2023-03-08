@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="d-flex container justify-content-center align-items-center p-2">
           <div className="me-auto ms-2">
             <Link to="/react-news-app" className="nav-title">
-              Emre Soylu
+              News
             </Link>
           </div>
           <div className="d-flex align-items-center">
@@ -28,7 +28,7 @@ const Navbar = () => {
                 <input
                   placeholder="Search..."
                   className="navbar-input form-control"
-                  type="search"
+                  type="text"
                 />
               </div>
               <div>
@@ -47,7 +47,7 @@ const Navbar = () => {
 "
             className="nav-title-2"
           >
-            Emre Soylu
+            News
           </Link>
           <button
             className="navbar-toggler"
@@ -88,7 +88,7 @@ const Navbar = () => {
                     Home
                   </NavLink>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <NavLink
                     className={({ isActive }) =>
                       isActive ? "nav-link activee" : "nav-link"
@@ -98,7 +98,7 @@ const Navbar = () => {
                   >
                     About
                   </NavLink>
-                </li>
+                </li> */}
 
                 <li className="nav-item">
                   <NavLink
@@ -177,7 +177,7 @@ const Navbar = () => {
             <input
               placeholder="Search..."
               className="navbar-input form-control"
-              type="search"
+              type="text"
             />
           </div>
           <div>

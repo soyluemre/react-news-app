@@ -9,7 +9,7 @@ const News = ({ data, totalPages }) => {
     setPage(num);
   };
 
-  const startIndex = (page - 1) * 3;
+  const startIndex = (page - 1) * 6;
   const selectedData = data.slice(startIndex, startIndex + 9);
 
   return (
@@ -23,13 +23,13 @@ const News = ({ data, totalPages }) => {
             >
               <div className="d-flex justify-content-center align-items-center">
                 <img
-                  src={items ? items?.urlToImage : newsImage}
+                  src={items.urlToImage ? items?.urlToImage : newsImage}
                   alt="newsimage"
                   className="img-fluid col-img"
                 />
               </div>
               <div className="data-title">
-                <a title="Habere Git" href={items?.url} target="_blank">
+                <a title="Click to read" href={items?.url} target="_blank">
                   {items?.title.slice(0, 90).concat("....")}
                 </a>
                 <p>{items?.description?.slice(0, 60).concat("...")}</p>

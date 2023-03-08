@@ -43,8 +43,8 @@ const Slider = ({ data }) => {
                 <span>EDITOR'S PICK</span>
                 <h5>{data[0]?.title?.slice(0, 50).concat("...")}</h5>
                 <p> {data[0]?.description?.slice(0, 200).concat("...")}</p>
-                <a href={data[0]?.url} target="_blank" title="Habere Git">
-                  {data[0] ? data[0].author : "Haberin Devamı.."}
+                <a href={data[0]?.url} target="_blank" title="Click to read">
+                  {data[0] ? data[0].author : "..."}
                 </a>
               </div>
             </div>
@@ -60,8 +60,8 @@ const Slider = ({ data }) => {
                 <span>EDITOR'S PICK</span>
                 <h5>{data[1]?.title?.slice(0, 50).concat("...")}</h5>
                 <p> {data[1]?.description?.slice(0, 200).concat("...")}</p>
-                <a href={data[1]?.url} target="_blank" title="Habere Git">
-                  {data[1] ? data[1].author : "Haberin Devamı.."}
+                <a href={data[1]?.url} target="_blank" title="Click to read">
+                  {data[1] ? data[1].author : "..."}
                 </a>
               </div>
             </div>
@@ -77,8 +77,8 @@ const Slider = ({ data }) => {
                 <span>EDITOR'S PICK</span>
                 <h5>{data[2]?.title?.slice(0, 50).concat("...")}</h5>
                 <p> {data[2]?.description?.slice(0, 200).concat("...")}</p>
-                <a href={data[2]?.url} target="_blank" title="Habere Git">
-                  {data[2] ? data[2].author : "Haberin Devamı.."}
+                <a href={data[2]?.url} target="_blank" title="Click to read">
+                  {data[2] ? data[2].author : "..."}
                 </a>
               </div>
             </div>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz@6..72&display=swap");
+
 .App {
   text-align: center;
 }
@@ -23,17 +25,21 @@ li {
 }
 
 .nav-title {
+  font-family: "Newsreader", serif;
   font-size: 1.7rem;
   color: #000;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 2px;
   text-decoration: none;
 }
 
 .nav-title-2 {
+  font-family: "Newsreader", serif;
   display: none;
   font-size: 1.7rem;
   color: #000;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 2px;
   text-decoration: none;
 }
 
@@ -220,6 +226,7 @@ li {
 
 .page-link {
   color: #000;
+  font-size: 0.7rem;
 }
 
 .page-link:hover,
@@ -234,6 +241,7 @@ li {
 }
 
 .pagination-div {
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;

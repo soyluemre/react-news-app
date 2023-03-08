@@ -8,7 +8,7 @@ const Entertainment = () => {
   const { data, setData } = useContext(ContextProvider);
   const [page, setPage] = useState(1);
   const totalPages = 3;
-  const apiKey = "02a1e0e608cb49b1936a76ccb837bec9";
+  const apiKey = "20bbec40569c41c4a9dad51b0903d6b0";
 
   const startIndex = (page - 1) * 3;
   const selectedData = data.slice(startIndex, startIndex + 6);
@@ -20,7 +20,7 @@ const Entertainment = () => {
   const fetchData = async () => {
     await axios
       .get(
-        `https://newsapi.org/v2/top-headlines?country=tr&category=entertainment&apiKey=${apiKey}`
+        `https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=${apiKey}`
       )
       .then((res) => setData(res.data.articles))
       .catch((error) => console.log(error));
@@ -73,78 +73,78 @@ const Entertainment = () => {
             <div className="d-flex">
               <span className="span-1">01</span>
               <a href="#" className="popular-post-a">
-                EYT Teklifi Meclis Gündeminde!
+                Remarkable statement from NASA!
               </a>
             </div>
             <div className="span-div">
-              <span className="span-2">Sabah Gazetesi</span>
+              <span className="span-2">New York Times</span>
               <br />
-              <span className="span-3">29 Ocak • 3 dakika ⭐</span>
+              <span className="span-3"> 3 min. ⭐</span>
             </div>
           </div>
           <div className="popular-posts">
             <div className="d-flex">
               <span className="span-1">02</span>
               <a href="#" className="popular-post-a">
-                Ziraat Türkiye Kupası Kura Çekimleri
+                Drought is coming!
               </a>
             </div>
             <div className="span-div">
-              <span className="span-2">Fanatik Gazetesi</span>
+              <span className="span-2">Washington Post</span>
               <br />
-              <span className="span-3">30 Ocak • 2 dakika ⭐</span>
+              <span className="span-3">2 min. ⭐</span>
             </div>
           </div>
           <div className="popular-posts">
             <div className="d-flex">
               <span className="span-1">03</span>
               <a href="#" className="popular-post-a">
-                İstanbul'a Kar Geliyor!
+                The winner of the breathtaking match is Liverpool!
               </a>
             </div>
             <div className="span-div">
-              <span className="span-2">Hürriyet Gazetesi</span>
+              <span className="span-2">Los Angeles Times</span>
               <br />
-              <span className="span-3">02 Şubat • 4 dakika ⭐</span>
+              <span className="span-3">4 min. ⭐</span>
             </div>
           </div>
           <div className="popular-posts">
             <div className="d-flex">
               <span className="span-1">04</span>
               <a href="#" className="popular-post-a">
-                TEM Otoyolunda Feci Kaza!
+                Important statements from the World Bank
               </a>
             </div>
             <div className="span-div">
-              <span className="span-2">Milliyet Gazetesi</span>
+              <span className="span-2">Wall Street Journal</span>
               <br />
-              <span className="span-3">03 Şubat • 6 dakika ⭐</span>
+              <span className="span-3">6 min. ⭐</span>
             </div>
           </div>
           <div className="popular-posts">
             <div className="d-flex">
               <span className="span-1">05</span>
               <a href="#" className="popular-post-a">
-                Tarkan Yeni Albüm Çıkaracağını Söyledi!
+                Rihanna is releasing a new album!
               </a>
             </div>
             <div className="span-div">
-              <span className="span-2">Onedio</span>
+              <span className="span-2">The Boston Globe</span>
               <br />
-              <span className="span-3">03 Şubat • 2 dakika ⭐</span>
+              <span className="span-3">2 min. ⭐</span>
             </div>
           </div>
           <div className="popular-posts">
             <div className="d-flex">
               <span className="span-1">06</span>
               <a href="#" className="popular-post-a">
-                Yeşilçam'ın Usta Oyuncusunun Son Hali Görenleri Şaşkına Çevirdi!
+                Turkiye and Russia issued a joint statement
               </a>
             </div>
             <div className="span-div">
-              <span className="span-2">Takvim Gazetesi</span>
+              <span className="span-2">Daily News</span>
               <br />
-              <span className="span-3">28 Ocak • 7 dakika ⭐</span>
+              <span className="span-3">7 min. ⭐</span>
             </div>
           </div>
         </div>

@@ -7,11 +7,11 @@ import { ContextProvider } from "../Context/ContextProvider";
 const FetchData = () => {
   const { data, setData } = useContext(ContextProvider);
   const totalPages = 3;
-  const apiKey = "02a1e0e608cb49b1936a76ccb837bec9";
+  const apiKey = "20bbec40569c41c4a9dad51b0903d6b0";
 
   const fetchData = async () => {
     await axios
-      .get(`https://newsapi.org/v2/top-headlines?country=tr&apiKey=${apiKey}`)
+      .get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`)
       .then((res) => setData(res.data.articles))
       .catch((error) => console.log(error));
   };
